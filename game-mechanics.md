@@ -160,18 +160,18 @@ A storm is the game's main radiation event. **Each storm is built from a real so
 1. Turn the flare class (such as M2.1 or X6.9) into a number: `strength = clamp((log10(flux) + 5.5) / 2, 0, 0.85)`, where flux is the class letter's base value times its number (M = 1e-5, X = 1e-4). Classes without a letter (for example "Big eruptions" in the Aug 1972 archive item) use 0.7.
 2. Storm length = `round(30 + 70 × strength)` minutes.
 3. Full dose if you stay outside the whole time = `30 + 24 × strength` percent of health.
-4. Shield cost to shelter everyone = `round(12 + 36 × strength)`.
+4. Shield cost to shelter everyone = `round(22 + 20 × strength)`. Sheltering only the waiting crew costs half of that, rounded up.
 
 Worked examples (computed from the code):
 
 | Flare | Strength | Lasts | Dose if outside the whole storm | Shield to shelter everyone | Shield to shelter the waiting crew |
 |---|---|---|---|---|---|
-| M1.0 | 0.25 | 48 min | 36% | 21 | 11 |
-| M2.1 | 0.41 | 59 min | 40% | 27 | 14 |
+| M1.0 | 0.25 | 48 min | 36% | 27 | 14 |
+| M2.1 | 0.41 | 59 min | 40% | 30 | 15 |
 | M5.0 | 0.60 | 72 min | 44% | 34 | 17 |
-| X1.0 | 0.75 | 83 min | 48% | 39 | 20 |
-| X6.9 | 0.85 (cap) | 90 min | 50% | 43 | 22 |
-| "Big eruptions" (1972) | 0.70 | 79 min | 47% | 37 | 19 |
+| X1.0 | 0.75 | 83 min | 48% | 37 | 19 |
+| X6.9 | 0.85 (cap) | 90 min | 50% | 39 | 20 |
+| "Big eruptions" (1972) | 0.70 | 79 min | 47% | 36 | 18 |
 
 Because one storm is at most about half of someone's health, it takes **two or three** exposures to make an astronaut sick, not one.
 
@@ -230,7 +230,7 @@ Each live event is tagged with who published it, and the storm screen shows "LIV
 
 ### 9.3 The link between the real flare and the game
 
-The storm screen shows the link directly. For example: *"This storm is a real flare: M2.1, 10 Nov 2026 → storm lasts 59m, shelter costs 27 shield."* A bigger real flare always makes a longer, costlier storm (table in section 7). So the player's shielding decision is tied to actual recent space weather.
+The storm screen shows the link directly. For example: *"This storm is a real flare: M2.1, 10 Nov 2026 → storm lasts 59m, shelter costs 30 shield."* A bigger real flare always makes a longer, costlier storm (table in section 7). So the player's shielding decision is tied to actual recent space weather.
 
 ### 9.4 RadLab card (saved copy)
 

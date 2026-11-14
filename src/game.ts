@@ -42,7 +42,7 @@ export function makeStorm(event: WeatherEvent, warnAt: number): Storm {
   return {
     warnAt, startAt: warnAt + STORM_LEAD, duration: Math.round(30 + 70 * s), s,
     // one full storm outside is about a third to half of a person's health, so it takes 2 or 3 storms to get sick
-    dosePerMin: (30 + 24 * s) / Math.round(30 + 70 * s), shieldCost: Math.round(12 + 36 * s), event,
+    dosePerMin: (30 + 24 * s) / Math.round(30 + 70 * s), shieldCost: Math.round(22 + 20 * s), event,
   };
 }
 

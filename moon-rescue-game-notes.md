@@ -11,7 +11,7 @@ Team flavour: we are team **Bring Nasi Lemak to The Moon**, so three astronauts 
 Each astronaut has Health from 100% down (kids see Health; under the hood it is radiation dose, health = 100 - dose). Sun storms drain it for anyone outside. Late help calls and bumpy trips also cost health. At 0% the astronaut is sick and has 2.5 hours to get home, or you lose. The old Boss Watch meter was removed.
 
 ## How it matches the NASA brief (Junior Astronaut Mission Trainer)
-- **Real trade-offs, no free choice:** three core resources (Power, Air, Shield). Power makes air and charges the shield, and rescue trips spend it. Sun storms force a choice: everyone shelters (costs shield, rescues pause), shelter the waiting crew (cheaper, drivers get a dose), or keep working (free, but astronauts may get sick).
+- **Real trade-offs, no free choice:** three core resources (Power, Air, Shield). Power makes air and charges the shield, and rescue trips spend it. Sun storms force a choice: everyone shelters (costs shield, rescues pause), shelter the waiting crew (half the cost, drivers get a dose), or keep working (free, but astronauts may get sick).
 - **Real data:** each storm is built from a real M or X class flare from NASA DONKI (live from the CCMC DONKI API, fetched in the browser, no key needed; if that server cannot be reached the game uses NOAA's live GOES X-ray flare list and says so). If both live calls fail, it uses NASA-documented archive storms and says so on screen. Static data is never shown as live.
 - **Attribution in the tool:** "About the NASA data" screen, a status chip, and a source line on every science card and storm.
 - **Plain language:** radiation and dose are explained in context. Large text, short sentences.
