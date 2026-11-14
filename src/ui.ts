@@ -433,8 +433,13 @@ export function renderEnd(g: Game, ui: UIState): string {
   const wx = `<span class="soft">${statusText(ui.weather)}</span>`;
   if (g.over === 'win') {
     const s = stars(g);
+    const msg = [
+      ['You made it!', 'It was close! Try sheltering the crew from sun storms.'],
+      ['Great job!', 'Some health was lost on the way. Shelter more in storms.'],
+      ['Perfect dispatch!', 'Everyone stayed healthy. Well done, Mission Control!'],
+    ][s - 1];
     return `<div class="screen center"><div class="stars" aria-label="${s} out of 3 stars">${[1, 2, 3].map((i) => (i <= s ? STAR(i === 2 ? 120 : 96) : STAR_OFF(i === 2 ? 120 : 96))).join('')}</div>
-    <div><h1 class="big-h" style="color:var(--mint)">Everybody's home!</h1><p class="lead" style="margin:10px auto 0">You rescued all 5 astronauts${sick === 0 ? ', and everyone stayed healthy' : `, though ${sick} got sick from radiation`}. Great job, Mission Control!</p></div>
+    <div><h1 class="big-h" style="color:var(--mint)">${msg[0]}</h1><p class="lead" style="margin:10px auto 0">All 5 astronauts are home. ${msg[1]}</p></div>
     <div class="statrow">${stat('Brought home', '5 of 5')}${stat('Rescues', String(g.rescues))}${stat('Total time', total)}${stat('Got sick', String(sick))}</div>
     ${wx}<button class="btn-big" data-action="again">Play again</button></div>`;
   }

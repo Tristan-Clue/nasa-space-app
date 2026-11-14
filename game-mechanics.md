@@ -191,7 +191,7 @@ The storm screen also lets you charge the shield with power before you choose. C
 - **Lose (air)**: any astronaut's air reaches 0.
 - **Lose (health)**: a sick astronaut is not home within 2.5 hours of getting sick.
 
-**Stars** at the end of a win use crew health: 3 stars if nobody got sick and the average health is at least 70%; 2 stars if the average is at least 40%; otherwise 1. A loss shows a gentle message and a tip, and a Try again button.
+**Stars** at the end of a win use crew health: 3 stars if nobody got sick and the average health is at least 70%; 2 stars if the average is at least 40%; otherwise 1. The win screen has its own message for each rating: 3 stars "Perfect dispatch!" (everyone stayed healthy), 2 stars "Great job!" (some health was lost on the way, shelter more in storms), 1 star "You made it!" (it was close, try sheltering the crew). Each says "All 5 astronauts are home." first. A loss shows a gentle message and a tip, and a Try again button.
 
 ## 9. How the real data is used
 
