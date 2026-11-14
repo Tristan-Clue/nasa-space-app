@@ -33,7 +33,7 @@ The trade-off the game teaches: power, air and shielding all compete. Power make
 ## 2. Time
 
 - The game clock runs in **game minutes**. Normal speed is 2 game minutes per real second; Fast is 6 (`SPEEDS` in `src/ui.ts`).
-- A full careful game lasts roughly 16 game hours (about 8 minutes of real time at Normal).
+- A full careful game lasts about 18 game hours (the bots' median is 1,071 minutes, roughly 9 minutes of real time at Normal).
 - Everything below that says "minutes" or "hours" means game time. On screen, times are shown as hours and minutes with units, such as "1h 42m" or "45m", so they are never mistaken for minutes:seconds.
 
 ## 3. The three resources
@@ -114,7 +114,7 @@ Scripts (`makeScripts` in `src/data.ts`). The first number is the first call tim
 | Jonas | air, stuck, nasi lemak, home | 30 min |
 | Hana | nasi lemak, air, home | 240 min |
 
-When someone is rescued home, they and their helper both go home, and the helper's own "ride home" call is marked as in progress too. A sick astronaut's remaining calls are dropped and replaced by a single ride-home call.
+When someone is rescued home, they and their helper both go home, and the helper's own "ride home" call is marked as in progress too. A sick astronaut's upcoming calls are dropped and replaced by a single ride-home call (a call that is already open stays open).
 
 ## 6. Rescues
 

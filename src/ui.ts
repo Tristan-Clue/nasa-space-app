@@ -69,13 +69,13 @@ export function renderTitle(ui: UIState): string {
 
 export function renderAbout(ui: UIState): string {
   const li = (a: string, b: string) => `<li><b>${a}</b> ${b}</li>`;
-  return `<div class="screen" style="padding:24px 40px;gap:14px">
+  return `<div class="screen" style="padding:24px 40px 32px;gap:14px;overflow-y:auto">
   <div style="display:flex;align-items:center;gap:20px"><button class="pill" data-action="back-title">← Back</button><h1 style="color:#fff;font-size:34px">About the NASA data</h1></div>
   <div class="card pad" style="gap:10px">
     <h2>Where the sun storms come from</h2>
     <p style="font-size:18px">Each storm in the game is built from a <b>real solar flare</b>. A flare is a giant explosion on the Sun. NASA rates flares C, M or X, and each letter is 10 times stronger than the one before. The bigger the real flare, the longer and stronger the storm in your game.</p>
     <ul class="list">
-      ${li('Live data:', 'NASA DONKI (Space Weather Database Of Notifications, Knowledge, Information) solar flares from the last 30 days. If the NASA server is busy or down, the game uses the live GOES X-ray flare list from NOAA (last 7 days) instead and says so. Both are asked every time you open the game.')}
+      ${li('Live data:', 'NASA DONKI (Space Weather Database Of Notifications, Knowledge, Information) solar flares from the last 30 days. If the NASA server is busy or down, the game uses the live GOES X-ray flare list from NOAA (last 7 days) instead and says so. Both are asked when you open the game and the answer is kept for an hour. NOAA is a different US agency from NASA, so the game labels its data separately.')}
       ${li('Archive data:', 'If the live call does not work (no internet, or NASA is busy), the game uses real flares and storms that NASA has documented, such as the Aug 1972 eruptions between Apollo 16 and 17. The game always says which one it is using. Archive data is never shown as live.')}
       ${li('Right now:', statusText(ui.weather) + '.')}
     </ul>
@@ -92,7 +92,7 @@ export function renderAbout(ui: UIState): string {
   <div class="card pad" style="gap:10px">
     <h2>Icons</h2>
     <ul class="list">
-      ${li('Tabler Icons', '(MIT license, tabler.io/icons): the power, air, shield, drone, rover, sun and sick icons.')}
+      ${li('Tabler Icons', '(MIT license, tabler.io/icons): the power, air, shield, drone, rover, food, sun and health icons, and more.')}
       ${li('OpenMoji', '(CC BY-SA 4.0, openmoji.org, by the OpenMoji contributors): the astronaut and rocket pictures.')}
     </ul>
   </div>

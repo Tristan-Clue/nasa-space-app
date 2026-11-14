@@ -2,7 +2,7 @@
 
 A 2D mission-control game for kids aged 7 to 12, built for the NASA Space Apps Challenge 2026 (Junior Astronaut Mission Trainer) by team **Bring Nasi Lemak to The Moon**. Three astronauts ask for a nasi lemak delivery along the way (drone or rover, small power cost, and it makes them feel stronger).
 
-You sent 5 astronauts to the moon and now they can't get home. Run Mission Control: read their help calls, plan rescues, and spend **power, air and radiation shielding** wisely. Sun storms built from **real NASA solar flare data** force hard choices. Keep everyone healthy and bring them all home.
+You sent 5 astronauts to the moon and now they can't get home. Run Mission Control: read their help calls, plan rescues, and spend **power, air and radiation shielding** wisely. Sun storms built from **real solar flare data** (NASA DONKI, with a labelled NOAA backup) force hard choices. Keep everyone healthy and bring them all home.
 
 No backend, no engine: Vite + TypeScript + plain HTML/CSS. Plays in any browser, no account.
 
@@ -62,13 +62,16 @@ See [game-mechanics.md](game-mechanics.md) for every game rule, the exact number
 | File | What it holds |
 |---|---|
 | `src/data.ts` | Astronauts, positions, costs, who asks for what and when, surprise events, archive storms, science facts. **Edit this to rebalance or add content.** |
-| `src/spaceweather.ts` | Live DONKI fetch, parsing, caching, and the archive fallback. |
+| `src/spaceweather.ts` | Live flare fetch (NASA DONKI first, NOAA GOES backup after 2.5 seconds), parsing, caching, and the archive fallback. |
 | `src/game.ts` | All rules (no DOM): clock, resources, requests, planning, storms, win/lose. |
 | `src/ui.ts` | Screen rendering. |
 | `src/icons.ts` | Inline Tabler SVG icons and the OpenMoji images (licenses in the file header). |
+| `src/scenery.ts` | The moon map: craters, rocks, the NASA flag, Home base and rescue trails. |
 | `src/main.ts` | Game loop, clicks, screen switching, scaling to the window. |
 | `scripts/sim-test.ts` | Headless bots with three strategies (careful, lazy, reckless). |
+| `game-mechanics.md` | Every rule, the exact numbers, and how the real data is used. |
+| `scope.md`, `resource.md` | The challenge scope and resource list, for reference. |
 
 ## Credits
 
-Icons: [Tabler Icons](https://tabler.io/icons) (MIT) and [OpenMoji](https://openmoji.org) astronaut and rocket (CC BY-SA 4.0, attribution to the OpenMoji contributors). Space weather: NASA DONKI, NASA Open APIs. Science facts: NASA Goddard Space Flight Center, NASA Langley Research Center, NASA Open Science Data Repository (OSDR) and RadLab. NASA does not endorse this project.
+Icons: [Tabler Icons](https://tabler.io/icons) (MIT) and [OpenMoji](https://openmoji.org) astronaut and rocket (CC BY-SA 4.0, attribution to the OpenMoji contributors). Fonts: Fredoka and Nunito from Google Fonts (SIL Open Font License). Space weather: NASA DONKI (CCMC) and the NOAA Space Weather Prediction Center GOES X-ray flare list. Science facts: NASA Goddard Space Flight Center, NASA Langley Research Center, NASA Open Science Data Repository (OSDR) and RadLab. Food facts: Canadian Space Agency. NASA does not endorse this project; NOAA and the Canadian Space Agency do not endorse it either.

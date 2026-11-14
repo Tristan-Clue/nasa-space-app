@@ -323,3 +323,6 @@ h2.sec { font-size: 22px; color: #fff; margin: 0 0 2px; }
 
 .title-screen .title-h { font-size: 72px; }
 .hdr .hdr-title { font-size: 32px; }
+
+.screen::-webkit-scrollbar { width: 10px; } .screen::-webkit-scrollbar-thumb { background: #1D58B8; border-radius: 5px; }
+.screen > .card { flex: none; }
