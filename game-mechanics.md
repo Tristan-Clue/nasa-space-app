@@ -308,7 +308,7 @@ All of these knobs are plain constants in `src/data.ts` and `src/game.ts`.
 | `src/game.ts` | All rules with no screen code: clock, resources, calls, planning, storms, health, win and lose |
 | `src/ui.ts` | Screens and text |
 | `src/icons.ts` | Icons: Tabler (MIT), OpenMoji astronaut and rocket (CC BY-SA 4.0) |
-| `src/scenery.ts` | The moon map: craters, rocks, the NASA flag, Home base, rescue trails |
+| `src/scenery.ts` | The moon map: craters, rocks, the team flag, Home base, rescue trails |
 | `src/main.ts` | Game loop, clicks, screen switching, window scaling |
 | `scripts/sim-test.ts` | The bots |
 | `README.md` | How to run, resource table, data table and credits |

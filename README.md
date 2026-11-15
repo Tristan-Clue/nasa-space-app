@@ -66,7 +66,7 @@ See [game-mechanics.md](game-mechanics.md) for every game rule, the exact number
 | `src/game.ts` | All rules (no DOM): clock, resources, requests, planning, storms, win/lose. |
 | `src/ui.ts` | Screen rendering. |
 | `src/icons.ts` | Inline Tabler SVG icons and the OpenMoji images (licenses in the file header). |
-| `src/scenery.ts` | The moon map: craters, rocks, the NASA flag, Home base and rescue trails. |
+| `src/scenery.ts` | The moon map: craters, rocks, the team flag, Home base and rescue trails. |
 | `src/main.ts` | Game loop, clicks, screen switching, scaling to the window. |
 | `scripts/sim-test.ts` | Headless bots with three strategies (careful, lazy, reckless). |
 | `game-mechanics.md` | Every rule, the exact numbers, and how the real data is used. |

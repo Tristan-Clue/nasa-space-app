@@ -1,4 +1,4 @@
-// Decorative scenery for the moon map: craters, rocks, the NASA flag and Home base.
+// Decorative scenery for the moon map: craters, rocks, our team flag and Home base.
 // All positions are in percent of the map, the same coordinate system as astronauts and HQ.
 // Everything here is our own simple artwork (no outside assets) and ignores the mouse.
 import type { Game, Pt } from './types';
@@ -17,12 +17,10 @@ const rock = (s: number) =>
 const FLAG = `<svg width="64" height="64" viewBox="0 0 64 64" aria-hidden="true">
   <path d="M6 62 V4" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
   <circle cx="6" cy="62" r="3" fill="#D3DFF5"/>
-  <path d="M7 5 Q22 1 34 5 T61 5 V37 Q48 41 34 37 T7 37 Z" fill="#0B3D91" stroke="#fff" stroke-width="1.5"/>
-  <circle cx="34" cy="21" r="13" fill="#0B3D91" stroke="#fff" stroke-width="1.5"/>
-  <g fill="#fff"><circle cx="28" cy="13" r=".9"/><circle cx="38" cy="12" r=".9"/><circle cx="41" cy="18" r=".7"/><circle cx="27" cy="19" r=".7"/><circle cx="32" cy="10" r=".6"/></g>
-  <path d="M22 26 Q32 14 44 15 Q34 18 28 29 Z" fill="#FC3D21"/>
-  <ellipse cx="34" cy="21" rx="13" ry="4.6" fill="none" stroke="#fff" stroke-width="1" transform="rotate(-25 34 21)"/>
-  <text x="34" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="7.5" fill="#fff" letter-spacing=".4">NASA</text>
+  <path d="M7 5 Q22 1 34 5 T61 5 V37 Q48 41 34 37 T7 37 Z" fill="#2FB67C" stroke="#fff" stroke-width="1.5"/>
+  <circle cx="34" cy="21" r="10" fill="#fff"/>
+  <circle cx="30" cy="18" r="2.4" fill="#D3DFF5"/><circle cx="38" cy="23" r="1.8" fill="#D3DFF5"/><circle cx="31" cy="26" r="1.3" fill="#D3DFF5"/>
+  <g fill="#fff"><circle cx="17" cy="12" r="1"/><circle cx="52" cy="14" r="1"/><circle cx="50" cy="29" r=".8"/><circle cx="18" cy="29" r=".8"/></g>
 </svg>`;
 
 const place = (cls: string, x: number, y: number, art: string, label: string) =>
